@@ -1,0 +1,35 @@
+{
+  "name": "buildtools",
+  "version": "1.0.1",
+  "description": "Some build tools for analyzing a project",
+  "scripts": {
+      "test": "./node_modules/.bin/jasmine-node ."
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "commander": "latest"
+  },
+  "devDependencies": {
+    "jasmine-node": "latest",
+    "grunt": "latest",
+    "grunt-jsdoc": "latest",
+    "grunt-release": "latest",
+    "jsdoc": "latest"
+  },
+  "release": {
+    "options": {
+      "changelog": true,
+      "changelogText": "<%= version %>\n",
+      "npm": false,
+      "folder": "./publish",
+      "tagName": "tag-<%= version %>",
+      "commitMessage": "release <%= version %>",
+      "tagMessage": "tagging version <%= version %>",
+      "beforeBump": [],
+      "afterBump": [],
+      "beforeRelease": [],
+      "afterRelease": []
+    }
+  }
+}
